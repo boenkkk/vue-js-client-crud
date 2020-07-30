@@ -7,7 +7,13 @@
           <a href="/tutorials" class="nav-link">Tutorials</a>
         </li>
         <li class="nav-item">
-          <a href="/add" class="nav-link">Add</a>
+          <a href="/add" class="nav-link">Add Tutorial</a>
+        </li>
+        <li class="nav-item">
+          <a href="/profiles" class="nav-link">Profiles</a>
+        </li>
+        <li class="nav-item">
+          <a href="/addProfile" class="nav-link">Add Profile</a>
         </li>
       </div>
     </nav>

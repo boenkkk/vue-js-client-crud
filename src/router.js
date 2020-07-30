@@ -21,6 +21,17 @@ export default new Router({
       path: "/add",
       name: "add",
       component: () => import("./components/AddTutorial")
+    },
+    // Profile
+    {
+      path: "/profiles",
+      name: "profile",
+      component: () => import("./components/ProfilesList")
+    },
+    {
+      path: "/addProfile",
+      name: "add-profile",
+      component: () => import("./components/AddProfile")
     }
   ]
 });
