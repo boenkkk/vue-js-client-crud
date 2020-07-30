@@ -32,6 +32,11 @@ export default new Router({
       path: "/addProfile",
       name: "add-profile",
       component: () => import("./components/AddProfile")
+    },
+    {
+      path: "/profiles/:id",
+      name: "profile-details",
+      component: () => import("./components/Profile")
     }
   ]
 });
