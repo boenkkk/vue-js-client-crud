@@ -22,6 +22,10 @@
           {{ profile.firstName }} {{ profile.lastName }}
         </li>
       </ul>
+
+      <button class="m-3 btn btn-sm btn-danger" @click="removeAllProfiles">
+          Remove All
+      </button>
     </div>
 
     <div class="col-md-6">
@@ -89,6 +93,17 @@ export default {
         .then(response => {
           this.profiles = response.data;
           console.log(response.data);
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    },
+
+    removeAllProfiles() {
+      ProfileDataService.deleteAll()
+        .then(response => {
+          console.log(response.data);
+          this.refreshList();
         })
         .catch(e => {
           console.log(e);

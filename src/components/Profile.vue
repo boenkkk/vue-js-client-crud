@@ -22,6 +22,12 @@
       </div>
     </form>
 
+    <button class="badge badge-danger mr-2"
+        @click="deleteProfile"
+    >
+    Delete
+    </button>
+
     <button type="submit" class="badge badge-success"
         @click="updateProfile"
     >
@@ -70,6 +76,16 @@ export default {
                 });
         },
 
+        deleteProfile() {
+            ProfileDataService.delete(this.currentProfile.id)
+                .then(response => {
+                    console.log(response.data);
+                    this.$router.push({ name: "Profile" });
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+        }
     },
     mounted() {
         this.message = '';

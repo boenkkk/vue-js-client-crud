@@ -20,6 +20,14 @@ class ProfileDataService {
     update(id, data) {
         return http.put(`/profiles/${id}`, data);
     }
+
+    delete(id) {
+        return http.delete(`/profiles/${id}`);
+    }
+    
+    deleteAll() {
+        return http.delete(`/profiles`);
+    }
 }
 
 export default new ProfileDataService();
